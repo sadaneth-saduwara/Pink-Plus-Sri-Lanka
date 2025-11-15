@@ -1,0 +1,4 @@
+.gallery img:hover, .videos video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 102, 178, 0.4);
+}

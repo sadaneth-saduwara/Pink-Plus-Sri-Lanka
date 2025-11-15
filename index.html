@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Plus</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffe4f2;
+      margin: 0;
+      padding: 0;
+      color: #444;
+    }
+
+    header {
+      background-color: #ff66b2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ff3399;
+      border-bottom: 2px solid #ff99cc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .gallery, .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img, .videos video {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover, .videos video:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ff66b2;
+      color: white;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+<audio id="bg-music" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" 
+style="position:fixed; bottom:20px; right:20px; background:#ff3399; color:white; 
+border:none; border-radius:30px; padding:10px 20px; font-size:1em; cursor:pointer; 
+box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+🔊 Music On/Off
+</button>
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const toggle = document.getElementById("music-toggle");
+  toggle.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      toggle.textContent = "🔊 Music On";
+    } else {
+      music.pause();
+      toggle.textContent = "🔈 Music Off";
+    }
+  });
+</script>
+  <header>🌸 Pink Plus 🌸</header>
+<section style="text-align:center; background-color:#fff0f7; padding:25px; border-radius:15px; margin:20px auto; max-width:900px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+  <h2 style="color:#ff3399;">Welcome to Pink Plus 🍰🥤</h2>
+  <p style="font-size:1.1em; color:#555; line-height:1.6;">
+    At <strong>Pink Plus</strong>, we bring you a world full of sweetness and color! 💕  
+    Our shop is famous for its <strong>fresh fruit juices</strong>, <strong>delicious cakes</strong>, and <strong>desserts made with love</strong>.  
+    Whether you’re craving a cold juice on a sunny day or a soft creamy cake to make your moment special — Pink Plus is the perfect place to treat yourself! 🎂✨  
+    Visit us today and taste the joy in every sip and bite! 💖
+  </p>
+</section>
+<section style="text-align:center; background-color:#fff0f7; padding:25px; border-radius:15px; margin:20px auto; max-width:900px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+  <h2 style="color:#ff3399;">Pink Plus වෙත සාදරයෙන් පිළිගනිමු 🍰🥤</h2>
+  <p style="font-size:1.1em; color:#555; line-height:1.6;">
+    <strong>Pink Plus</strong> යනු රසවත් ජූස්, මෘදු හා රසකැවිලි කේක්,  
+    සහ ආදරයෙන් සූදානම් කළ විවිධ මීමස් රසවන් බඳුන්වලින් පිරුණු මනෝරම ස්ථානයකි. 💕  
+    උණු දවසක සීතල ජූස් එකක් හෝ විශේෂ මොහොතකට මෘදු කේක් එකක් —  
+    ඔබේ රසයට ගැළපෙන දේ අපි සෑම විටම සූදානම්! 🎂✨  
+    අදම Pink Plus වෙත පැමිණ ඔබේ ආහාරය සතුටින් රසවිඳින්න! 💖
+  </p>
+</section>
+
+  <section>
+    <h2>📸 Photo Gallery</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+      <img src="photo3.jpg" alt="Photo 3">
+      <img src="photo4.jpg" alt="Photo 4">
+      <img src="photo5.jpg" alt="Photo 5">
+      <img src="photo6.jpg" alt="Photo 6">
+      <img src="photo7.jpg" alt="Photo 7">
+      <!-- Add more photos here -->
+    </div>
+  </section>
+
+  <section>
+    <h2>🎬 Videos</h2>
+    <div class="videos">
+      <center><video controls>
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+      </video></center>
+      <video controls>
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="video4.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="video5.mp4" type="video/mp4">
+      </video>
+      <!-- Add more videos here -->
+    </div>
+  </section>
+<section style="text-align:center; background:#fff0f7; padding:20px;">
+  <h2>💬 What Our Customers Say</h2>
+  <p>“Best cake shop ever! The chocolate cake melts in your mouth!”</p>
+  <p>“Fresh juices, friendly staff, and lovely vibes!”</p>
+</section>
+
+<section style="background-color:#ffe4f2; padding:25px; text-align:center; margin-top:30px; border-top:2px solid #ff99cc;">
+  <h2 style="color:#ff3399;">📞 Contact Us</h2>
+  <p style="font-size:1.1em; color:#555;">
+    Have a question or want to place an order? <br>
+    We’re always happy to hear from you! 💬 <br><br>
+    <strong>📱 Phone:</strong> <a href="tel:0741223710" style="color:#ff3399; text-decoration:none;">074 122 3710</a> <br>
+    <strong>🕒 Open Hours:</strong> 9:00 AM - 7:00 PM <br>
+    <strong>📍 Location:</strong>51/A weralupitiya para sithagama avissawella, Sri Lanka
+  </p>
+</section>
+
+  <footer>© 2025 Pink Plus | Created by Pink Plus Team 💗</footer>
+</body>
+</html>
